@@ -112,7 +112,7 @@ lazy val root = project.in(file(".")).
   aggregate(core, io, benchmark)
 
 lazy val core = project.in(file("core")).
-  settings(commonSettings).
+  settings(commonSettings ++ OSGi.core).
   settings(
     name := "fs2-core"
   )
